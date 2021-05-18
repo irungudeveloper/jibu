@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<a href=" {{ route('question.index') }}" class="text-white"> <i class="fas fa-arrow-left"></i> Manage Questions</a>
+					<a href="/question" class="text-white"> <i class="fas fa-arrow-left"></i> Manage Questions</a>
 				</div>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<a href=" {{ route('answer.index') }}" class="text-white"> <i class="fas fa-arrow-left"></i> Manage Answers</a>
+					<a href="/answer" class="text-white"> <i class="fas fa-arrow-left"></i> Manage Answers</a>
 				</div>
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<a href=" {{ route('sub.index') }}" class="text-white"> <i class="fas fa-arrow-left"></i> Manage Subscribers</a>
+					<a href="/sub" class="text-white"> <i class="fas fa-arrow-left"></i> Manage Subscribers</a>
 				</div>
 			</div>
 		</div>

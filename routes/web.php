@@ -25,13 +25,13 @@ use App\Http\Controllers\SubscriptionController;
 Route::get('/', [DashboardController::class,'landing']);
 
 Route::resource('/anwser',AnswerController::class,[
-        'as' => 'answer'])->only(['index','store','update','destroy'])->name('answer');
+        'as' => 'answer'])->only(['index','store','update','destroy']);
 
 Route::resource('/sub',SubscriptionController::class,[
-        'as' => 'sub'])->only(['index','store','update','destroy'])->name('sub');
+        'as' => 'sub'])->only(['index','store','update','destroy']);
 
 Route::resource('/question',QuestionController::class,[
-        'as' => '/question'])->only(['index','store','update','destroy'])->name('question');
+        'as' => '/question'])->only(['index','store','update','destroy']);
 
 Route::post('/answer/option',[AnswerController::class,'getOptions'])->name('answer.option');
 

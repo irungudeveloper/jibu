@@ -64,8 +64,8 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="hero-content-wrapper">
-                <h3 class="text-white">One Stop Shop For Your Academic Question Answers</h3>
-                <p class="text-white">Get started by searching for the question below or scroll to view other featured questions and gain knowledge</p>
+                <h3>One Stop Shop For Your Academic Question Answers</h3>
+                <p>Get started by searching for the question below or scroll to view other featured questions and gain knowledge</p>
 
                   <div class="input-group mb-3">
                       <input type="text" class="form-control" placeholder="Search For Question" aria-label="Recipient's username" aria-describedby="basic-addon2">

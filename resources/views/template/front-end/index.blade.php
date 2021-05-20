@@ -8,7 +8,7 @@
         <h2 class="text-center pt-3">All Questions</h2>
         <div class="row">
           @foreach($question as $data)
-            <div class="col-6">
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-12">
               <div class="card border border-3">
                 <div class="card-body">
                   <div class="row">
@@ -20,16 +20,16 @@
                     <div class="col-12">
                         <div class="row">
                           @foreach($data->option as $option)
-                              <div class="col-6">
+                              <div class="col-md-6 col-lg-6 col-xs-6 col-sm-12">
                                 <p>A: {{ $option->option_a }} </p>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6 col-lg-6 col-xs-6 col-sm-12">
                                 <p>B: {{ $option->option_b }} </p>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6 col-lg-6 col-xs-6 col-sm-12">
                                 <p>C: {{ $option->option_c }} </p>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6 col-lg-6 col-xs-6 col-sm-12">
                                 <p>D: {{ $option->option_d }} </p>
                               </div>
                            @endforeach
@@ -37,10 +37,6 @@
                     </div>
                   </div>
                   <div class="row">
-
-                    <div class="col-12">
-                      
-                    </div>
                   </div>
                 </div>
                 <div class="card-footer text-center">
@@ -63,7 +59,7 @@
       </div>
      
      @foreach($sub as $data)
-      <div class="col-4 p-2">
+      <div class="col-md-4 col-lg-4 col-xs-4 col-sm-12">
         <div class="m-1 card border border-3"> 
         
           <div class="card-body">

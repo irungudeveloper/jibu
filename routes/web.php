@@ -56,4 +56,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
+Route::view('/lindy','template.front-end.index');
+
+// Route::get('/new/home',[Answ])
+
 

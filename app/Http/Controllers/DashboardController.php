@@ -17,7 +17,7 @@ class DashboardController extends Controller
     	$sub = Subscription::all();
     	$question = Question::all();
     	$pay = 100;
-    	return view('welcome')->with('answer',$answer)
+    	return view('template.front-end.index')->with('answer',$answer)
     						  ->with('question',$question)
     						  ->with('sub',$sub);
     }

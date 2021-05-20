@@ -11,7 +11,7 @@
 @section('content')
 
 	<div class="row">
-		<div class="col-4">
+		<div class="col-12 col-md-4 col-lg-4 col-sm-12">
 			<div class="card alert-success text-white">
 				<div class="card-body">
 					<div class="row">
@@ -28,7 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-4">
+		<div class="col-12 col-md-4 col-lg-4 col-sm-12">
 			<div class="card alert-info text-white">
 				<div class="card-body">
 					<div class="row">
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-4">
+		<div class="col-12 col-md-4 col-lg-4 col-sm-12">
 			<div class="card alert-primary text-white">
 				<div class="card-body">
 					<div class="row">
@@ -66,14 +66,14 @@
 
 	<div class="container">
 		<div class="row mt-2 justify-content-center">
-			<div class="col-6 bg-white">
+			<div class="col-md-6 col-12 col-sm-12 col-lg-6 bg-white">
 				<div class="row bg-secondary p-5 m-2">
 					<div class="col-12">
 						<p class="text-center">Graph-1</p>	
 					</div>
 				</div>
 			</div>
-			<div class="col-6 bg-white">
+			<div class="col-md-6 col-12 col-sm-12 col-lg-6 bg-white">
 				<div class="row bg-secondary p-5 m-2">
 					<div class="col-12">
 						<p class="text-center">Graph-2</p>	

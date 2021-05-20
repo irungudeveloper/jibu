@@ -74,7 +74,6 @@
 </head>
 
 <body class="@yield('classes_body')" @yield('body_data')>
-    <div class="preloader"></div>
     {{-- Body Content --}}
     @yield('body')
 
@@ -105,13 +104,6 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
-    <script type="text/javascript">
-    
-    window.onload = function(){
-      $('.preloader').fadeOut('slow');
-    }
-    
-  </script>
 
 </body>
 

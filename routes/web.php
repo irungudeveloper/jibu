@@ -24,14 +24,17 @@ use App\Http\Controllers\SubscriptionController;
 
 Route::get('/', [DashboardController::class,'landing']);
 
-Route::resource('/anwser',AnswerController::class,[
-        'as' => 'answer'])->only(['index','store','update','destroy']);
+// Route::resource('/anwser',AnswerController::class);
 
-Route::resource('/sub',SubscriptionController::class,[
-        'as' => 'sub'])->only(['index','store','update','destroy']);
+Route::get('/answer/create',[AnswerController::class,'create'])->name('answer.create');
+Route::post('/answer',[AnswerController::class,'store'])->name('answer.store');
+Route::get('/answer/{id}/edit',[AnswerController::class,'edit'])->name('answer.edit');
+Route::delete('/answwer/{id}',[AnswerController::class,'delete'])->name('answer.delete');
+Route::put('/answer/{id}',[AnswerController::class,'update'])->name('answer.update');
 
-Route::resource('/question',QuestionController::class,[
-        'as' => '/question'])->only(['index','store','update','destroy']);
+Route::resource('/sub',SubscriptionController::class);
+
+Route::resource('/question',QuestionController::class);
 
 Route::post('/answer/option',[AnswerController::class,'getOptions'])->name('answer.option');
 

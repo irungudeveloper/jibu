@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Question;
 use App\Models\Answer;
-use App\Models\Options
+use App\Models\Options;
 
 class AnswerController extends Controller
 {
@@ -15,6 +15,8 @@ class AnswerController extends Controller
         $answer = Answer::all();
 
         return view('answer.index')->with('answer',$answer);
+
+        // echo "HERE";
 
     }
 
@@ -26,6 +28,8 @@ class AnswerController extends Controller
     public function create()
     {
         //
+        
+       
         $question = Question::all();
 
         return view('answer.create')->with('question',$question);

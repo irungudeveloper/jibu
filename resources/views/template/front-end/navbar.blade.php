@@ -31,19 +31,32 @@
                         <a class="page-scroll" href="#0">Contact</a>
                       </li>
 
-                      <li class="nav-item">
-                        <a class="btn btn-success p-2 text-white" href="#0">Login</a>
-                      </li>
+                  @if (Route::has('login'))
 
+                    @auth
+
+                    @can('administrator')
+                      <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="btn btn-outline-primary rounded-pill ml-5">Dashboard</a>
+                      </li>
+                    @endcan
+
+                    @can('subscriber')
+                      <li class="nav-item">
+                        <form method="POST" action=" {{ route('logout') }} ">
+                          @csrf
+                          <button class="btn btn-outline-danger rounded-pillml-5">LOGOUT</button>
+                        </form>
+                      </li>
+                    @endcan
+                    @endauth
+                     @endif
+                      <li class="nav-item">
+                        <a href="{{route('new.login')}}" class="btn btn-success text-white p-2">Login</a>
+                      </li>
+              
                     </ul>
                     
-                  </div>
-                  <div class="header-search">
-
-                    <a href="#0"> <i class="lni lni-search-alt"></i> </a>
-                    <form action="#">
-                      <input type="text" placeholder="Type for search...">
-                    </form>
                   </div>
                   <!-- navbar collapse -->
                 </nav>

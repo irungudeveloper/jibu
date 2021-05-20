@@ -21,8 +21,9 @@ class SubscriptionController extends Controller
 
     public function display($sub)
     {
-        $sub = Subscription::where('id',$sub);
-        return view('payment.subscribe')->with('sub',$sub);
+        $sub = Subscription::where('id',$sub)->get();
+        // print_r($sub);
+        return view('template.front-end.subscribe')->with('sub',$sub);
     }
 
     public function accountCreate(Request $request)

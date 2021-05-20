@@ -50,7 +50,7 @@ class AnswerController extends Controller
     {
       $answer = Answer::findOrFail($id);
 
-      return view('single')->with('answer',$answer);
+      return view('template.front-end.single')->with('answer',$answer);
     }
 
     /**

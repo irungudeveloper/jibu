@@ -22,7 +22,7 @@ use App\Http\Controllers\SubscriptionController;
 |
 */
 
-Route::get('/', [DashboardController::class,'landing']);
+Route::get('/', [DashboardController::class,'landing'])->name('landing');
 
 // Route::resource('/anwser',AnswerController::class);
 
@@ -57,6 +57,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 Route::view('/lindy','template.front-end.index');
+
+Route::view('/new/signin','template.front-end.signin')->name('new.signin');
+Route::view('/new/login','template.front-end.login')->name('new.login');
 
 // Route::get('/new/home',[Answ])
 

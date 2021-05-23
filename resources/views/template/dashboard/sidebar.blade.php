@@ -44,10 +44,6 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         
-                         <li>
-                            <a class="profile-pic" href="{{ route('logout') }} ">
-                               <span class="text-white font-medium btn btn-outline-danger">Logout</span></a>
-                        </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -138,11 +134,10 @@
                             <div class="col-md-12">
                                 
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('logout')}}"
-                                        aria-expanded="false">
-                                        <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
-                                        <span class="hide-menu">Logout</span>
-                                    </a>
+                                    <form method="post" action=" {{ route('logout') }} ">
+                                        @csrf
+                                        <button class="sidebar-link waves-effect waves-dark sidebar-link"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout</button>
+                                    </form>
                                    
                                  </li>
                             </div>

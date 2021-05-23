@@ -52,7 +52,7 @@
                 Add Question +
             </a> 
 
-            <table id="myTable" class="table table-sm-responsive table-striped table-bordered">
+            <table id="myTable" class="table table-responsive table-striped table-bordered">
                 <thead class="table-dark text-white">
                   
                     <th scope="col" class="text-white">Question</th>

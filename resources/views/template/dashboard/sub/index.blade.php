@@ -52,7 +52,7 @@
                 Add Package +
             </a> 
 
-            <table id="myTable" class="table table-responsive-sm table-striped table-bordered">
+            <table id="myTable" class="table table-responsive table-striped table-bordered">
                 <thead class="table-dark">
                    
                     <th scope="col" class="text-white">Name</th>

@@ -12,7 +12,7 @@
 	
 	<div class="row justify-content-center m-0">
 		<div class="col-10 bg-white">
-			<table id="myTable" class="table table-responsive-sm table-stripped">
+			<table id="myTable" class="table table-responsive table-stripped">
 				<thead>
 					<th scope="col">#</th>
 					<th scope="col">Question</th>

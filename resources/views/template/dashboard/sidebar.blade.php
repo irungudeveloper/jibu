@@ -134,6 +134,20 @@
                             </div>
                         </div>
 
+                        <div class="row pt-5">
+                            <div class="col-md-12">
+                                
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('logout')}}"
+                                        aria-expanded="false">
+                                        <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                                        <span class="hide-menu">Logout</span>
+                                    </a>
+                                   
+                                 </li>
+                            </div>
+                        </div>
+
                     </ul>
 
                 </nav>

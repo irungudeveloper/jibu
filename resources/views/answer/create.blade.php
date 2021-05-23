@@ -35,7 +35,7 @@
 				</div>
 				<div class="form-group row">
 					<div class="col-12 text-center">
-						<button class="btn btn-success pl-3 pr-3">UPLOAD ANSWER</button>
+						<button class="btn btn-success pl-3 pr-3 text-white border rounded">UPLOAD ANSWER</button>
 					</div>
 				</div>
 			</form>

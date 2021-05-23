@@ -16,7 +16,7 @@ class SubscriptionController extends Controller
         //
         $subscription = Subscription::all();
 
-        return view('sub.index')->with('sub',$subscription);
+        return view('template.dashboard.sub.index')->with('sub',$subscription);
     }
 
     public function display($sub)
@@ -88,7 +88,7 @@ class SubscriptionController extends Controller
     public function create()
     {
         //
-        return view('sub.create');
+        return view('template.dashboard.sub.create');
 
     }
 
@@ -147,7 +147,7 @@ class SubscriptionController extends Controller
         //
         $sub = Subscription::findOrFail($id);
 
-        return view('sub.edit')->with('sub',$sub);
+        return view('template.dashboard.sub.edit')->with('sub',$sub);
     }
 
     /**

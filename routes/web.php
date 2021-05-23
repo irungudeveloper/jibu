@@ -25,11 +25,11 @@ use App\Http\Controllers\SubscriptionController;
 Route::get('/', [DashboardController::class,'landing'])->name('landing');
 
 // Route::resource('/anwser',AnswerController::class);
-
+Route::get('/answer',[AnswerController::class,'index'])->name('answer.index');
 Route::get('/answer/create',[AnswerController::class,'create'])->name('answer.create');
 Route::post('/answer',[AnswerController::class,'store'])->name('answer.store');
 Route::get('/answer/{id}/edit',[AnswerController::class,'edit'])->name('answer.edit');
-Route::delete('/answwer/{id}',[AnswerController::class,'delete'])->name('answer.delete');
+Route::delete('/answwer/{id}',[AnswerController::class,'destroy'])->name('answer.destroy');
 Route::put('/answer/{id}',[AnswerController::class,'update'])->name('answer.update');
 
 Route::resource('/sub',SubscriptionController::class);
@@ -38,7 +38,7 @@ Route::resource('/question',QuestionController::class);
 
 Route::post('/answer/option',[AnswerController::class,'getOptions'])->name('answer.option');
 
-Route::get('/home',[HomeController::class,'home']);
+Route::get('/home',[HomeController::class,'home'])->name('home');
 
 Route::get('/single/{id}',[AnswerController::class,'single'])->name('answer.single');
 
@@ -56,7 +56,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
-Route::view('/lindy','template.front-end.index');
+Route::view('/dash','template.dashboard.dashboard');
 
 Route::view('/new/signin','template.front-end.signin')->name('new.signin');
 Route::view('/new/login','template.front-end.login')->name('new.login');

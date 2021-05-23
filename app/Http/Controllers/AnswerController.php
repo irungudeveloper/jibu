@@ -14,7 +14,7 @@ class AnswerController extends Controller
         //
         $answer = Answer::all();
 
-        return view('answer.index')->with('answer',$answer);
+        return view('template.dashboard.answer.index')->with('answer',$answer);
 
         // echo "HERE";
 
@@ -32,7 +32,7 @@ class AnswerController extends Controller
        
         $question = Question::all();
 
-        return view('answer.create')->with('question',$question);
+        return view('template.dashboard.answer.create')->with('question',$question);
     }
 
     public function getOptions(Request $request)
@@ -138,7 +138,7 @@ class AnswerController extends Controller
         $question = Question::all();
         $option = Options::all();
 
-        return view('answer.edit')->with('answer',$answer)
+        return view('template.dashboard.answer.edit')->with('answer',$answer)
                                   ->with('question',$question)
                                   ->with('option',$option);
     }

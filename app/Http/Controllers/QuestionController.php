@@ -14,7 +14,7 @@ class QuestionController extends Controller
         //
         $question = Question::all();
 
-        return view('question.index')->with('question',$question);
+        return view('template.dashboard.question.index')->with('question',$question);
     }
 
     /**
@@ -26,7 +26,7 @@ class QuestionController extends Controller
     {
         //
 
-        return view('question.create');
+        return view('template.dashboard.question.create');
     }
 
     /**
@@ -137,7 +137,7 @@ class QuestionController extends Controller
         //
         $question = Question::findOrFail($id);
 
-        return view('question.edit')->with('question',$question);
+        return view('template.dashboard.question.edit')->with('question',$question);
     }
 
     /**

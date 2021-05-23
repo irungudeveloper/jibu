@@ -52,7 +52,8 @@
                 Add Package +
             </a> 
 
-            <table id="myTable" class="table table-sm-responsive table-striped table-bordered">
+            <div class="table-responsive">
+                 <table id="myTable" class="table table-sm-responsive table-striped table-bordered">
                 <thead class="table-dark">
                    
                     <th scope="col" class="text-white">Name</th>
@@ -107,6 +108,9 @@
                     @endforeach
                 </tbody>
             </table>
+            </div>
+
+           
         </div>
     </div>
 

@@ -52,7 +52,8 @@
                 Add Question +
             </a> 
 
-            <table id="myTable" class="table table-responsive table-striped table-bordered">
+            <div class="table-responsive">
+                <table id="myTable" class="table table-responsive table-striped table-bordered">
                 <thead class="table-dark text-white">
                   
                     <th scope="col" class="text-white">Question</th>
@@ -75,7 +76,7 @@
                             @endforeach
                             <td> 
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6 mb-2">
                                         <a class="btn btn-info text-white rounded-circle" href=" {{ route('question.edit',$data->id) }} ">
                                             <i class="fas fa-eye"></i>
                                         </a>
@@ -115,6 +116,9 @@
                     @endforeach
                 </tbody>
             </table>
+            </div>
+
+            
         </div>
     </div>
 

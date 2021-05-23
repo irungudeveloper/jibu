@@ -65,12 +65,12 @@
                             <td> {{ $data->explanation }} </td>
                             <td> 
                                 <div class="row p-2">
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6 mb-2">
                                         <a class="btn btn-info text-white rounded-circle" href=" {{ route('answer.edit',$data->id) }} ">
                                             <i class="fas fa-eye"></i>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-sm-12 col-md-2 col-lg-2">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
                                         <button type="button" class="btn btn-danger rounded-pill text-white" data-bs-toggle="modal" data-bs-target="#exampleModal{{$data->id}}">
                                           <i class="fas fa-trash-alt"></i>
                                         </button>

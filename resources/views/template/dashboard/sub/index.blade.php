@@ -68,7 +68,7 @@
                             <td> {{ $data->amount }} </td>
                             <td> 
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6 mb-2">
                                         <a class="btn btn-info text-white rounded-circle" href=" {{ route('sub.edit',$data->id) }} ">
                                             <i class="fas fa-eye"></i>
                                         </a>

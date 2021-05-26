@@ -16,16 +16,16 @@
                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                   <ul id="nav" class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="page-scroll" href="#0">Home</a>
+                      <a class="page-scroll" href=" {{ route('landing') }} ">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#0">Questions</a>
+                      <a class="page-scroll" href="{{ route('landing') }}">Questions</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#0">Packages</a>
+                      <a class="page-scroll" href="{{ route('landing') }}">Packages</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#0">Contact</a>
+                      <a class="page-scroll" href="{{ route('landing') }}">Contact</a>
                     </li>
                      @if (Route::has('login'))
 

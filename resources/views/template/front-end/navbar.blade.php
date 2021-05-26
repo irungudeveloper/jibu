@@ -19,16 +19,16 @@
                   <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent4">
                     <ul id="nav4" class="navbar-nav ml-auto">
                       <li class="nav-item">
-                        <a class="page-scroll" href="#0">Home</a>
+                        <a class="page-scroll" href=" {{ route('landing') }} ">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="#0">Questions</a>
+                        <a class="page-scroll" href="#questions">Questions</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="#0">Packages</a>
+                        <a class="page-scroll" href="#packages">Packages</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="#0">Contact</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                       </li>
 
                   @if (Route::has('login'))
@@ -50,10 +50,13 @@
                       </li>
                     @endcan
                     @endauth
-                     @endif
-                      <li class="nav-item">
+                    
+                    @else
+                       <li class="nav-item">
                         <a href="{{route('new.login')}}" class="btn btn-success text-white p-2">Login</a>
                       </li>
+                     @endif
+                     
               
                     </ul>
                     

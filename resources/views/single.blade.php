@@ -1,6 +1,7 @@
-@extends('master')
+@extends('template.front-end.master')
   @section('content')   
 
+  @include('template.front-end.nav')
     <div class="row m-0 mb-5">
      
     </div>
@@ -37,6 +38,8 @@
       </div>
     </div>
      
+@include('template.front-end.footer')
+
 @endsection
 
 

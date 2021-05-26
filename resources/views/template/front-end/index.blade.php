@@ -3,7 +3,7 @@
 
 @include('template.front-end.navbar')
 
-	  <div class="row m-3">
+	  <div class="row m-3" id="questions">
       <div class="col-12">
         <h2 class="text-center pt-3">All Questions</h2>
         <div class="row">
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-      <div class="row m-3 p-2 mt-5">
+      <div class="row m-3 p-2 mt-5" id="packages">
       <div class="col-12">
         <h2 class="text-center">Subscription Packages</h2>
       </div>

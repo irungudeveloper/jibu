@@ -1,4 +1,4 @@
-<footer class="footer footer-style-1" style="background-color: #8da7be;">
+<footer class="footer footer-style-1" style="background-color: #8da7be;" id="contact">
       <div class="container">
         <div class="widget-wrapper">
           <div class="row justify-content-end">

@@ -52,9 +52,11 @@
                     @endauth
                     
                     @else
+                    
                        <li class="nav-item">
                         <a href="{{route('new.login')}}" class="btn btn-success text-white p-2">Login</a>
                       </li>
+
                      @endif
                      
               

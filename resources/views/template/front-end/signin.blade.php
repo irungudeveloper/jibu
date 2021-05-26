@@ -55,7 +55,10 @@
 
                 <div class="form-group row">
                   <div class="col-12 text-center">
-                    <button class="btn btn-solid btn-success">Create Account</button>
+                    <button class="btn btn-solid btn-success" id="create">Create Account</button>
+                  </div>
+                   <div class="col-12 text-center">
+                    <button class="btn btn-solid btn-info" id="send" style="display: none;">Sending Data Please Wait</button>
                   </div>
                 </div>
 
@@ -70,6 +73,99 @@
       </div>
     </section>
 
+     
+
 @include('template.front-end.footer')
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+  </script> 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+
+    
+      $('#create').on('click',function(e) 
+      {
+          e.preventDefault();
+
+          var sir_name = $('#sir_name').val();
+          var other_name= $('#other_name').val();
+          var email= $('#email').val();
+          var password= $('#password').val();
+          var retype= $('#retype').val();
+          var phone= $('#phone').val();
+
+          if (password == retype) 
+          {
+
+              $('#create').hide();
+              $('#send').show();
+
+              $.ajax(
+              {
+                  url:" {{ route('subaccount.store') }} ",
+                  method:"POST",
+                  data:{
+                    "_token":" {{ csrf_token() }} ",
+                    sir_name:sir_name,
+                    other_name:other_name,
+                    email:email,
+                    phone:phone,
+                    password:password
+                  },
+                  dataType:'json',
+                  success:function(response) 
+                  {
+
+                     $('#create').show();
+                      $('#send').hide();
+                    if (response.response == "Email Exists") 
+                    {
+                       swal(
+                      {
+                        title: "Sorry",
+                        text: response.response,
+                        icon: "warning",
+                        
+                      });
+                    }
+                    else
+                    {
+                       swal(
+                      {
+                        title: "Success",
+                        text: response.response,
+                        icon: "success",
+                        
+                      });
+                    }
+
+                     
+                      console.table(response);
+                  },
+                  error:function(error)
+                  {
+                     $('#create').show();
+                     $('#send').hide();
+                   
+                  }
+              });
+          }
+          else
+          {
+
+               swal(
+                      {
+                        title: "Error",
+                        text:'Password Does Not Match',
+                        icon: "error",
+                        
+                      });
+
+             
+          }
+
+      });
+
+  </script>
 
 @endsection

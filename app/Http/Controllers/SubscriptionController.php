@@ -36,8 +36,17 @@ class SubscriptionController extends Controller
                                         ]);
         if ($validate) 
         {
-           if ($request->password == $request->retype) 
-           {
+
+            $email_exists = User::where('email',$request->email)->get();
+          
+            
+
+            if ($email_exists->count()) 
+            {
+                return response()->json(['response'=>'Email Exists']);
+            }
+            else
+            {
                $hash = Hash::make($request->password);
 
                $user = new User;
@@ -51,24 +60,19 @@ class SubscriptionController extends Controller
 
                if ($user->save()) 
                {
-                   // return response()->json(['status_code'=>201]);
-                return redirect()->route('landing');
+                   return response()->json(['response'=>'Account Created Successfully']);
+                // return redirect()->route('landing');
                }
                else
                {
-                    return response()->json(['status_code'=>500]);
+                    return response()->json(['response'=>'Internal server error! please try again']);
                }
 
-           }
-           else
-           {
-                return response()->json(['status_code'=>303]);
-           }
-
-        }
+          }
+       }
         else
         {
-            return response()->json(['status_code'=>300]);
+            return response()->json(['response'=>'Invalid details']);
         }
        // User::create([
        //      'name' => $data['name'],

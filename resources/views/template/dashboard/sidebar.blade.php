@@ -53,8 +53,10 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li>
-                            <a class="profile-pic btn btn-danger btn-sm" href=" {{ route('logout') }} ">
-                               Logout </a>
+                             <form method="post" action=" {{ route('logout') }} ">
+                                        @csrf
+                                        <button class="profile-pic btn btn-danger btn-sm"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout</button>
+                                    </form>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->

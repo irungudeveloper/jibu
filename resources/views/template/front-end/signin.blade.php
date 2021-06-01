@@ -138,9 +138,8 @@
                         
                       });
                     }
-
-                     
-                      console.table(response);
+                      window.location = "{{route('new.login')}}"; 
+                      // console.table(response);
                   },
                   error:function(error)
                   {

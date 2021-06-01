@@ -19,21 +19,20 @@
                       <a class="page-scroll" href=" {{ route('landing') }} ">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="{{ route('landing') }}">Questions</a>
+                      <a class="page-scroll" href="{{ route('view.question') }}">Questions</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="{{ route('landing') }}">Packages</a>
+                      <a class="page-scroll" href="{{ route('view.package') }}">Packages</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="{{ route('landing') }}">Contact</a>
+                      <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                     @if (Route::has('login'))
-
+                    
                     @auth
 
                     @can('administrator')
                       <li class="nav-item">
-                        <a href="{{ url('/home') }}" class=" mt-2 btn btn-outline-primary rounded-pill">Dashboard</a>
+                        <a href="{{ url('/home') }}" class="page-scroll text-primary">Dashboard</a>
                       </li>
                     @endcan
 
@@ -41,12 +40,18 @@
                       <li class="nav-item">
                         <form method="POST" action=" {{ route('logout') }} ">
                           @csrf
-                          <button class="mt-3 btn-sm btn btn-outline-danger rounded-pillml-5">LOGOUT</button>
+                          <button class="page-scroll text-danger">LOGOUT</button>
                         </form>
                       </li>
                     @endcan
                     @endauth
-                     @endif
+                     
+                    @guest
+                      <li class="nav-item"> 
+                        <a href="{{route('new.login')}}" class="page-scroll text-success">Login</a>
+                      </li>
+                    @endguest
+
                   </ul>
                 </div>
                 <!-- navbar collapse -->

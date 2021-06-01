@@ -13,13 +13,20 @@ class DashboardController extends Controller
     //
      public function landing()
     {
-    	$answer = Answer::all();
-    	$sub = Subscription::all();
-    	$question = Question::all();
-    	$pay = 100;
-    	return view('template.front-end.index')->with('answer',$answer)
-    						  ->with('question',$question)
-    						  ->with('sub',$sub);
+    	return view('template.front-end.index');
+    }
+
+    public function getQuestions()
+    {
+        $question = Question::all();
+        return view('template.front-end.question')->with('question',$question);
+                              
+    }
+
+    public function getPackage()
+    {
+         $sub = Subscription::all();
+        return view('template.front-end.package')->with('sub',$sub);
     }
 
 }

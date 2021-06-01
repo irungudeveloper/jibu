@@ -22,17 +22,16 @@
                         <a class="page-scroll" href=" {{ route('landing') }} ">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="#questions">Questions</a>
+                        <a class="page-scroll" href="{{route('view.question')}}">Questions</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="#packages">Packages</a>
+                        <a class="page-scroll" href="{{route('view.package')}}">Packages</a>
                       </li>
                       <li class="nav-item">
                         <a class="page-scroll" href="#contact">Contact</a>
                       </li>
 
-                  @if (Route::has('login'))
-
+                
                     @auth
 
                     @can('administrator')
@@ -51,13 +50,13 @@
                     @endcan
                     @endauth
                     
-                    @else
+                    @guest
                     
                        <li class="nav-item">
                         <a href="{{route('new.login')}}" class="btn btn-success text-white p-2">Login</a>
                       </li>
 
-                     @endif
+                     @endguest
                      
               
                     </ul>

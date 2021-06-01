@@ -6,10 +6,10 @@
               <div class="footer-widget">
                 <h6 class="text-white">Quick Links</h6>
                 <ul class="links text-white">
-                  <li class="text-white"> <a class="text-white" href="#0">Home</a> </li>
-                  <li class="text-white"> <a class="text-white" href="#0">Questions</a> </li>
-                  <li class="text-white"> <a class="text-white" href="#0">Subscription</a> </li>
-                  <li class="text-white"> <a class="text-white" href="#0">Contact</a> </li>
+                  <li class="text-white"> <a class="text-white" href="{{route('landing')}}">Home</a> </li>
+                  <li class="text-white"> <a class="text-white" href="{{route('view.question')}}">Questions</a> </li>
+                  <li class="text-white"> <a class="text-white" href="{{route('view.package')}}">Packages</a> </li>
+                  <li class="text-white"> <a class="text-white" href="#contact">Contact</a> </li>
                 </ul>
               </div>
             </div>

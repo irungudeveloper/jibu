@@ -31,18 +31,7 @@
             </div>
           </div>
 
-             <div class="row mt-5">
-            <div class="col-sm-12 col-12 col-lg-12 col-md-12">
-              <h4 class="text-center">Join Us</h4>
-              <p class="text-center">Are you an experienced writer! We have jobs for you, just reach us and start the application process. </p>
-
-              <div class="row text-center">
-                <div class="col-12 col-md-12 col-sm-12 text-center">
-                   <a href="#" class="btn btn-solid btn-success rounded-pill text-center">APPLY NOW</a>
-                </div> 
-              </div>
-            </div>
-          </div>
+            
 
         </div>
       </div>

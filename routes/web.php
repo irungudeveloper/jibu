@@ -63,6 +63,8 @@ Route::view('/new/login','template.front-end.login')->name('new.login');
 Route::get('/view/question',[DashboardController::class,'getQuestions'])->name('view.question');
 Route::get('/view/package',[DashboardController::class,'getPackage'])->name('view.package');
 
+Route::view('essay','template.front-end.writer')->name('essay');
+
 // Route::get('/new/home',[Answ])
 
 

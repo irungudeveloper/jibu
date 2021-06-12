@@ -11,6 +11,8 @@ class Subscription extends Model
 
      protected $table = "subscription";
 
+     public $timestamps = false;
+
     protected $fillable = [
     						'name',
     						'amount',

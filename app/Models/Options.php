@@ -12,7 +12,8 @@ class Options extends Model
      protected $table = "options";
     protected $fillable = ['option_a','option_b', 'option_c', 'option_d','question_id'];
 
-   
+    public $timestamps = false;
+
     public function question()
     {
     	return $this->belongsTo('App\ModelsQuestion','id','question_id');

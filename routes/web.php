@@ -9,6 +9,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\SubmissionController;
 
 
 /*
@@ -64,6 +65,10 @@ Route::get('/view/question',[DashboardController::class,'getQuestions'])->name('
 Route::get('/view/package',[DashboardController::class,'getPackage'])->name('view.package');
 
 Route::view('essay','template.front-end.writer')->name('essay');
+
+Route::post('submit',[SubmissionController::class,'store'])->name('submit');
+Route::get('job',[SubmissionController::class,'index'])->name('job');
+
 
 // Route::get('/new/home',[Answ])
 

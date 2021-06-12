@@ -65,17 +65,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        $user = User::where('email',$data['email'])->get();
+        // $user = User::where('email',$data['email'])->get();
 
-        if ($user) 
-        {
-            return response()->json(['Error'=>'User already exists']);
-        }
-        else
-        {
-            try 
-            {
-                 return User::create([
+        // if ($user) 
+        // {
+        //     return response()->json(['Error'=>'User already exists']);
+        // }
+        // else
+        // {
+        //     try 
+        //     {
+                 $user_data =  User::create([
                     'name' => $data['name'],
                     'email' => $data['email'],
                     'password' => Hash::make($data['password']),
@@ -83,12 +83,17 @@ class RegisterController extends Controller
                     'role_id'=>$data['role_id'],
                     'account_status'=>0,
                 ]);
-            } 
-            catch (Exception $e) 
-            {
-                return response()->json(['error'=>'Could not save to the database']);
-            }
-        }
+
+                 return $user_data;
+
+        //     } 
+        //     catch (Exception $e) 
+        //     {
+        //         return response()->json(['error'=>'Could not save to the database']);
+        //     }
+        // }
+
+        // return $user;
 
     }
 }

@@ -10,6 +10,7 @@ class Answer extends Model
     use HasFactory;
 
     protected $table = "answer";
+    public $timestamps = false;
 
     protected $fillable = ['question_id','answer','explanation'];
 

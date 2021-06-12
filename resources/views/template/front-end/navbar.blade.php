@@ -36,7 +36,7 @@
 
                     @can('administrator')
                       <li class="nav-item">
-                        <a href="{{ url('/home') }}" class="btn btn-outline-primary rounded-pill ml-5">Dashboard</a>
+                        <a href="{{ url('/home') }}" class="btn btn-info text-white p-2 ml-5">Dashboard</a>
                       </li>
                     @endcan
 
@@ -82,7 +82,7 @@
             <div class="col-lg-6">
               <div class="hero-content-wrapper">
                 <h3>One Stop Shop For Your Academic Questions And Assignments</h3>
-                <p>Get started by searching for the question below or scroll to view other featured questions and gain knowledge. Additionally, we provide professional essay writing services, delivering before the dealines set. </p>
+                <p>Get started by searching for the question below or scroll to view other featured questions and gain knowledge. Additionally, we provide professional essay writing services, delivering before the dealines set.</p>
 
                   <div class="input-group mb-3">
                       <input type="text" class="form-control" placeholder="Search For Question" aria-label="Recipient's username" aria-describedby="basic-addon2">

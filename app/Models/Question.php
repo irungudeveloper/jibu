@@ -11,6 +11,7 @@ class Question extends Model
 
     protected $table = "question";
     protected $fillable = ['question'];
+    public $timestamps = false;
 
     public function answer()
     {

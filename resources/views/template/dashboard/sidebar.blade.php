@@ -144,6 +144,19 @@
                             </div>
                         </div>
 
+                         <div class="row pt-5">
+                            <div class="col-md-12">
+                                <p class="text-center"><b>Jobs Settings</b></p>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('job')}}"
+                                        aria-expanded="false">
+                                        <i class="fa fa-table" aria-hidden="true"></i>
+                                        <span class="hide-menu">Manage Jobs</span>
+                                    </a>
+                                 </li>
+                            </div>
+                        </div>
+
                         <div class="row pt-5">
                             <div class="col-md-12">
                                 

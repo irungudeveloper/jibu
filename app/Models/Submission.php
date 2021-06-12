@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Roles extends Model
+class Submission extends Model
 {
     use HasFactory;
 
-    protected $table = "roles";
+    protected $table = 'submission';
 
     public $timestamps = false;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name','email','description','hours','paper','pages'];
 }
